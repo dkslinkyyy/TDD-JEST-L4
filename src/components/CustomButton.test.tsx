@@ -18,6 +18,7 @@ describe("CustomButton", () => {
     const button = screen.getByRole("button", { name: buttonText });
     expect(button).toBeInTheDocument();
     expect(button).toHaveClass(ButtonState.idle);
+    expect(button).toHaveClass("button.clicked");
   });
 
   it("changes to hover state on mouse enter", () => {
