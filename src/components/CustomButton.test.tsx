@@ -7,7 +7,8 @@ describe(CustomButton, () => {
     const buttonName: string = "submit";
     const { getByText } = render(<CustomButton buttonName={buttonName} />);
     const button = getByText(buttonName);
-    expect(button).toHaveClass();
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent(buttonName);
   });
 });
 describe("CustomButton", () => {
